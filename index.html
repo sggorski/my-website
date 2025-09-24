@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Szymon Górski's site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#about">About me</a></li>
+        <li><a href="#details">Details</a></li>
+        <li><a href="#hobby">Interests</a></li>
+        <li><a href="#projects">Projects</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="about" class="section">
+    <h1>About me</h1>
+    <div class="about-container">
+      <img src="assets/me.jpg" alt="My photo" class="profile-img">
+      <div class="about-info">
+        <p><strong>Name and surname:</strong> Szymon Górski </p>
+        <p><strong>Birthday:</strong> 13.11.2004 </p>
+        <p><strong>Age:</strong> <span id="age"> </span> </p>
+        <p><strong>Location:</strong> Tarnów/Kraków </p>
+        <p><strong>Education:</strong> Computer Science and Intelligent Systems, AGH </p>
+      </div>
+    </div>
+    <div class="social-icons">
+    <a href="https://www.facebook.com/szymon.gorski.393" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.linkedin.com/in/szymon-g%C3%B3rski-340895301/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://github.com/sggorski" target="_blank"><i class="fab fa-github"></i></a>
+  </div>
+  </section>
+
+  <!-- Sekcja Szczegóły -->
+  <section id="details" class="section">
+    <h2>Details</h2>
+    <p>I am a third-year Computer Science and Intelligent Systems student at AGH University of Science and Technology. I am a member of the AI Lab student research group, which brings together enthusiasts of artificial intelligence. Currently, I am pursuing the IBM Data Engineering Professional Certificate on Coursera.</p>
+
+    <p>I have a strong interest in data analysis, processing, and visualization, including databases and related technologies. I am also passionate about AI, machine learning, and deep learning, which is reflected in my projects where I explored topics such as transformers and autoencoders.</p><br>
+
+    <p>I am proficient in Python and its data science and machine learning libraries, including NumPy, Pandas, Matplotlib, TensorFlow, and PyTorch. I have hands-on experience with databases such as PostgreSQL, MySQL, and IBM Db2, as well as data integration and streaming tools like Apache Airflow and Apache Kafka.</p>
+
+    <p>In addition, I am comfortable working with Java, where I collaborated with colleagues to design our own programming language. I also have some experience with C, C++, and C#.</p>
+  </section>
+
+  <!-- Sekcja Hobby -->
+  <section id="hobby" class="section">
+    <h2>Hobby & interets</h2>
+    <p>Beyond my studies and technical projects, I enjoy staying active and exploring new experiences. In my free time, I play tennis recreationally, which helps me stay focused and energized. I also love traveling and spending time in the mountains, where hiking allows me to combine physical activity with the appreciation of nature. Another passion of mine is photography — I enjoy capturing unique moments, places, and perspectives that reflect the way I see the world. You can view more of my photos here: <a href="https://www.instagram.com/casual_photographer13/" target="_blank">Click here!</a></p><br>
+
+    <p>Sports are also an important part of my life. I closely follow football and speedway racing, both of which inspire me with their energy and atmosphere. At the same time, I value personal growth and continuous learning.I am naturally curious and enjoy learning new things, constantly seeking opportunities to broaden my knowledge and skills.</p><br>
+    <div class="carousel">
+      <div class="carousel-track">
+        <img src="assets/hobby2.jpg" alt="Hobby 1">
+        <img src="assets/hobby1.jpg" alt="Hobby 2">
+        <img src="assets/hobby3.jpg" alt="Hobby 3">
+        <img src="assets/hobby4.jpg" alt="Hobby 4">
+        <img src="assets/hobby5.jpg" alt="Hobby 5">
+      </div>
+      <button class="carousel-btn prev">&#10094;</button>
+      <button class="carousel-btn next">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- Sekcja Projekty -->
+  <section id="projects" class="section">
+    <h2>My projects</h2>
+    <div class="projects-grid">
+      <div class="project-card" onclick="openModal('project1')">
+        <img src="assets/project1.jpg" alt="Projekt 1">
+        <h3>Photo-Sharpener</h3>
+        <p>DL-model trained to sharpen photos.</p>
+      </div>
+      <div class="project-card" onclick="openModal('project2')">
+        <img src="assets/project2.jpg" alt="Projekt 2">
+        <h3>Cflat</h3>
+        <p>Own interpreted language created to describe music and play simple melodies.</p>
+      </div>
+      <div class="project-card" onclick="openModal('project3')">
+        <img src="assets/project3.jpg" alt="Projekt 3">
+        <h3>Good vibezz</h3>
+        <p>A web platform that aggregates global news, filtering content through a custom machine learning model to display only positive stories.</p>
+      </div>
+      <div class="project-card" onclick="openModal('project4')">
+        <img src="assets/project4.jpg" alt="Projekt 4">
+        <h3>NoteTrip</h3>
+        <p>Web application that helps you document your journeys.</p>
+      </div>
+      <div class="project-card" onclick="openModal('project5')">
+        <img src="assets/project5.jpg" alt="Projekt 5">
+        <h3>Restuarant Organiser</h3>
+        <p>Web app that will help to collect orders from customers.</p>
+      </div>
+      <div class="project-card" onclick="openModal('project6')">
+        <img src="assets/project6.jpg" alt="Projekt 6">
+        <h3>Restaurant System</h3>
+        <p>Restaurant management system providing interfaces for customers, employees and managers.</p>
+      </div>
+      <div class="project-card" onclick="openModal('project7')">
+        <img src="assets/project7.jpg" alt="Projekt 7">
+        <h3>Poker</h3>
+        <p>Simple console poker game using sockets.</p>
+      </div>
+      <!-- Możesz dodać więcej projektów -->
+    </div>
+  </section>
+
+  <!-- Modal dla projektów -->
+  <div id="project1" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('project1')">&times;</span>
+      <h3>Photo-Sharpener</h3>
+      <p>This project aims to enhance image quality by removing blur and imperfections. It evolved through multiple stages, from a simple CNN to a U-Net-like encoder-decoder and finally a ResUNet with residual blocks. Transfer learning with VGG19 provided the best results. The model works best on images around 480×584 px and demonstrates effective sharpening, though it may occasionally misinterpret colors. The main goal of the project was learning and experimentation rather than achieving a perfect solution.
+            <br><br><b>Tech Stack</b>: TensorFlow, OpenCV, Jupyter Lab, CUDA</p><br>
+        <div style="display: flex; justify-content: center; margin: 20px 0;">
+            <a class="button" href="https://github.com/sggorski/Photo-Sharpener" target="_blank">Click here!</a>
+        </div>
+
+    </div>
+  </div>
+
+  <div id="project2" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('project2')">&times;</span>
+      <h3>Cflat</h3>
+      <p>CFlat (C♭) is an interpreted programming language specifically designed for music composition. It allows you to write code that generates musical pieces, from simple melodies to complex polyphonic compositions.
+        CFlat combines programming constructs with musical notation, enabling musicians and programmers to create music through code. The language provides intuitive syntax for musical elements like notes, chords, and tracks, along with programming features like variables, functions, and control structures.
+        <br><br><b>Tech Stack</b>: Java, Maven, ANTL4, MIDI
+      </p>
+      <div style="display: flex; justify-content: center; margin: 20px 0;">
+            <a class="button" href="https://github.com/sggorski/c_flat" target="_blank">Click here!</a>
+        </div>
+    </div>
+  </div>
+
+  <div id="project3" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('project3')">&times;</span>
+      <h3>Good vibezz</h3>
+      <p>The main goal of the project is to practice training and working with machine learning models, mainly the transformer architecture.
+        The news is automatically fetched every day from newsapi.ai using a scheduled cron job. Newsapi.org was also used to acquire training data for the model
+        Next, the articles are classified using a fine-tuned version of the BERT NLP model with a custom regression head added on top (predicting news sentiment in the [-1, 1] range).
+        <br><br><b>Tech Stack</b>: Python, PyTorch, Pandas, Transformers, Flask
+        <div style="display: flex; justify-content: center; margin: 20px 0;">
+            <a class="button" href="https://github.com/sggorski/news_project" target="_blank">Click here!</a>
+        </div>
+    </div>
+  </div>
+
+  <div id="project4" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('project4')">&times;</span>
+      <h3>NoteTrip</h3>
+      <p>This website is created for you as a trip-helper. You may easily store information about places you visited (or you are going to visit). All data is stored in an organized way.The website provides you with some statistics about those placed you created. You can also see a map displaying countries you've been to.The interface is really easy and intuitive so you'll surely have no troubles using our website. In case of some changes you may of course edit data you've put into.Last thing - leaderboard: you may see how well you're doing in traveling through different countries and compete with other users.
+        <br><br><b>Tech Stack</b>: C#, .NET, ASP.NET Core MVC
+        <div style="display: flex; justify-content: center; margin: 20px 0;">
+            <a class="button" href="https://github.com/pavlvs-91/NoteTripv2" target="_blank">Click here!</a>
+        </div>
+    </div>
+  </div>
+
+  <div id="project5" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('project5')">&times;</span>
+      <h3>Restaurant Organiser</h3>
+      <p>My goal was to create an application that will help in collecting orders in a restaurant. A person who collects orders can simply choose meals and quantity from the list. Then all of the orders can be seen and marked as done by the staff in the kitchen. My web-application also allow to edit the menu (add new dishes, delete ones and change some information) and send a daily report via restaurant's email.
+        <br><br><b>Tech Stack</b>: Python: Flask, sqlalchemy, smtplib, MySQL
+        <div style="display: flex; justify-content: center; margin: 20px 0;">
+            <a class="button" href="https://github.com/sggorski/restaurant_organiser" target="_blank">Click here!</a>
+        </div>
+    </div>
+  </div>
+
+  <div id="project6" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('project6')">&times;</span>
+      <h3>Restaurant System</h3>
+      <p>This project is a collaborative effort with my colleagues to build a restaurant management system. The goal was to create a comprehensive platform for managing restaurant operations, including menu management, order processing, table reservations, and user accounts.
+
+Due to time constraints, the full functionality could not be completed. Nevertheless, the customer interface has been fully implemented, allowing users to browse the menu, place orders, and interact with the system in a realistic way. The interface is intuitive and responsive, designed to work smoothly on both desktop and mobile devices. A video showcasing the completed customer interface is provided below.
+        <br><br><b>Tech Stack</b>: Python: Flask, sqlalchemy<br><br>
+        <iframe src="https://drive.google.com/file/d/1phmN5jqc8LaWQ-XjOAvdcKnZEko9xqFc/preview" 
+            width="640" height="360" allow="autoplay" allowfullscreen>
+        </iframe>
+    
+    </div>
+  </div>
+
+  <!-- Skrypt JS -->
+  <script>
+    // Modal
+    function openModal(id) {
+      document.getElementById(id).style.display = "block";
+    }
+    function closeModal(id) {
+      document.getElementById(id).style.display = "none";
+    }
+
+    // Karuzela
+    const track = document.querySelector('.carousel-track');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    let index = 0;
+
+    function updateCarousel() {
+    track.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    // Następny slajd
+    function nextSlide() {
+    index = (index + 1) % track.children.length;
+    updateCarousel();
+    }
+
+    // Poprzedni slajd
+    function prevSlide() {
+    index = (index - 1 + track.children.length) % track.children.length;
+    updateCarousel();
+    }
+
+    // Obsługa przycisków
+    nextBtn.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('click', prevSlide);
+
+    // Autoplay co 3 sekundy
+    setInterval(nextSlide, 3000);
+
+
+    function calculateAge(birthDate) {
+        const today = new Date();
+        const birth = new Date(birthDate);
+        let age = today.getFullYear() - birth.getFullYear();
+        const m = today.getMonth() - birth.getMonth();
+
+        if (m < 0 || (m === 0 && today.getDate() < birth.getDate())) {
+        age--;
+        }
+        return age;
+    }
+
+    const myAge = calculateAge("2004-11-13"); 
+    document.getElementById("age").textContent = myAge;
+
+  </script>
+</body>
+</html>

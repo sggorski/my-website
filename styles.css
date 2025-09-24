@@ -1,0 +1,269 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  line-height: 1.6;
+  background: #f9fbfd;
+  color: #2c3e50;
+}
+
+.social-icons {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin: 0 15px;
+  color: #040404;
+  font-size: 24px;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #f1c40f;
+  transform: scale(1.2);
+}
+/* ======================= */
+/* Nawigacja               */
+/* ======================= */
+.navbar {
+  background: #3498db;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #ecf0f1;
+}
+
+/* ======================= */
+/* Sekcje ogólne           */
+/* ======================= */
+.section {
+  padding: 70px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section h1,
+.section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #2c3e50;
+}
+
+/* ======================= */
+/* O mnie                  */
+/* ======================= */
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.profile-img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.about-info {
+  max-width: 500px;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+/* ======================= */
+/* Hobby – karuzela        */
+/* ======================= */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  max-width: 500px; /* szerokość całej karuzeli */
+  max-height: 300px; /* ograniczenie wysokości */
+  margin: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel img {
+  width: 100%;         /* obraz zajmuje całą szerokość karuzeli */
+  height: 100%;        /* dopasowuje wysokość do kontenera */
+  flex-shrink: 0;      
+  border-radius: 12px;
+  object-fit: cover;   /* przycina obraz proporcjonalnie */
+}
+
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(52,152,219,0.8);
+  color: white;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  border-radius: 50%;
+}
+
+.prev { left: 15px; }
+.next { right: 15px; }
+
+.carousel-btn:hover {
+  background: rgba(41,128,185,0.95);
+}
+
+/* ======================= */
+/* Projekty                */
+/* ======================= */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* ======================= */
+/* Modal (popup)           */
+/* ======================= */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  overflow: auto;
+  background: rgba(0,0,0,0.6);
+  padding: 50px 20px;
+}
+
+.modal-content {
+  background: white;
+  margin: auto;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 700px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+  color: #2c3e50;
+}
+
+.close:hover {
+  color: #e74c3c;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.button:hover {
+  background: linear-gradient(135deg, #2980b9, #3498db);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+.button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* ======================= */
+/* Responsywność           */
+/* ======================= */
+@media (max-width: 900px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .profile-img {
+    width: 160px;
+    height: 160px;
+  }
+  .navbar ul {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 15px;
+  }
+  .section {
+    padding: 50px 15px;
+  }
+  .projects-grid {
+    gap: 20px;
+  }
+}
