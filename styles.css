@@ -9,6 +9,7 @@ body {
   line-height: 1.6;
   background: #f0f4f8; 
   color: #1f2d3d;      
+  padding-top: 60px;
 }
 
 .social-icons {
@@ -63,7 +64,7 @@ body {
 .section {
   padding: 70px 20px;
   max-width: 1200px;
-  margin: auto;
+  margin: 30px auto;
   background: #ffffff;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
